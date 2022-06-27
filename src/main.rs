@@ -1,9 +1,4 @@
 use std::io::{
-    self,
-    Read
-};
-use std::num::ParseIntError;
-use std::io::{
     stdin,
     stdout,
     Write
@@ -29,7 +24,7 @@ fn main() {
 
         let a = match input().parse::<i32>() {
             Ok(a) => a,
-            Err(error) => {
+            Err(_) => {
                 println!("А может быть только числом!");
                 continue;
             },
@@ -38,7 +33,7 @@ fn main() {
         print!("Введите B: ");
         let b = match input().parse::<i32>() {
             Ok(b) => b,
-            Err(error) => {
+            Err(_) => {
                 println!("B может быть только числом!");
                 continue;
             },
